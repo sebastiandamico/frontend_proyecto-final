@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Proyecto Final - Frontend </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="tarjeta">
+
+        <div class="cont_avatar">
+            <canvas class="bordeAvatar"></canvas>
+            <canvas class="gradient"></canvas>
+            <img class="foto" src="https://randomuser.me/api/portraits/men/22.jpg" alt="Mi foto">
+        </div>
+
+        <div class="contenido">
+            <div class="box nombre">
+                <div class="text">
+                    <h4>Mi nombre es:</h4>
+                    <p>Ronnie Caldwell</p>
+                </div>
+            </div>
+
+            <div class="box email">
+                <div class="text">
+                    <h4>Mi email es:</h4>
+                    <p>ronnie.caldwell@ejemplo.com</p>
+                </div>
+            </div>
+
+            <div class="box telefono">
+                <div class="text">
+                    <h4>Mi número telefónico es:</h4>
+                    <p>(399) 950-6419</p>
+                </div>
+            </div>
+
+            <div class="box direccion">
+                <div class="text">
+                    <h4>Mi dirección es:</h4>
+                    <p>5811 Hamilton Ave</p>
+                </div>
+            </div>
+
+            <div class="box fecha">
+                <div class="text">
+                    <h4>Mi fecha de nacimiento es:</h4>
+                    <p>7/8/1980</p>
+                </div>
+            </div>
+        </div>
+        <ul class="cont_iconos">
+            <li class="active" data-content="nombre">
+                <span class="material-icons">
+                    face
+                    </span>
+            </li>
+
+            <li data-content="email">
+                <span class="material-icons">
+                    alternate_email
+                    </span>
+            </li>
+
+            <li data-content="telefono">
+                <span class="material-icons">
+                    phone_iphone
+                    </span>
+            </li>
+
+            <li data-content="direccion">
+                <span class="material-icons">
+                    contact_mail
+                    </span>
+            </li>
+
+            <li data-content="fecha">
+                <span class="material-icons">
+                    event_note
+                    </span>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="cont_footer">
+            <p class="agradecimiento">GRACIAS POR VER MI PRIMER PROYECTO DE PROGRAMACIÓN FRONTEND!  </p>
+            <p class="desarrollador">Desarrollado por <a class="enlace" href="mailto:sebastiandamico@yahoo.com">Sebastián D'Amico</a> 01/02/2023</p>
+        </div>
+    </footer>
+  
+    <script src="js/main.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/start-particles.js"></script>
+
+</body>
+</html> 

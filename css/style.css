@@ -1,0 +1,274 @@
+
+
+/* =============================================================================
+   Body
+   ========================================================================== */
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: auto;
+}
+
+#particles-js {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #12203d;
+}
+
+/* =============================================================================
+   Tarjeta
+   ========================================================================== */
+
+.tarjeta {
+    position: absolute;
+    width: 50vw;
+    height: 55vh;
+    border-radius: 2rem;
+    top: 25%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.40);
+    background-color: gainsboro;
+}
+
+.cont_avatar {
+    position: relative;
+    display: block;
+}
+
+.bordeAvatar {
+    position: absolute; 
+    display: inline-block;
+    width: 13vw;
+    aspect-ratio: 1 / 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #97ca3f;
+    box-shadow: 0.1rem 0.1rem 0.35rem rgba(0,0,0,0.20);
+}
+
+.gradient {
+    position: absolute; 
+    display: inline-block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    background-image: radial-gradient(ellipse at 80%, #97ca3f 30%, rgb(237, 241, 216));
+    width: 12.95vw;
+    aspect-ratio: 1 / 1;
+    filter: blur(2px);
+    animation: rotation 8s infinite linear;   
+}
+        @keyframes rotation {
+            from {
+            transform: rotate(0deg);
+            }
+            to {
+            transform: rotate(359deg);
+            }
+        }  /*@keyframes permite la rotacion infinita*/
+
+.foto {
+    width: 12vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;  
+}
+
+.contenido {
+    position: relative;
+    margin-top: 12vh;
+    padding: 2vw;
+    height: 20vh;
+    text-align: center;
+}
+
+.tarjeta .contenido .box {
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+.tarjeta .contenido .box .text h4 {
+    color: #2c2c2c;
+    font-size: 1.7rem;   
+    font-weight: 300;
+    margin-top: 3rem;
+    margin-bottom: 1rem; 
+} 
+
+.tarjeta .contenido .box .text p {
+    line-height: 1.8;
+    color: #2c2c2c;
+    font-size: 3.3rem;
+    font-weight: 800;
+    margin-top: 0;
+    word-break: break-all;
+}
+
+.tarjeta .contenido .box:not(:first-child) {
+    display: none;
+}  /* La pseudo-clase :not aplica los atributos a la clase .box menos el primero de la lista*/
+
+.material-icons {
+    font-size: 48px !important; /*ESTA ES LA CLASE ESPECIAL DE GOOGLE FONT ICONS*/
+}
+
+.cont_iconos { 
+    list-style: none;
+    position: relative;
+    display: flex;
+    height: 13vh;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    overflow: hidden;   
+}
+
+.cont_iconos li {
+    position: relative;
+    padding: 1vh 2vw;
+    color: #000000;
+    cursor: pointer;
+    color: #2c2c2c;
+    transition: all .5s ease;
+}
+
+.cont_iconos li.active,
+.cont_iconos li:hover {
+    color: #97ca3f;
+    transform:scale(1.25);   
+}
+
+/* =============================================================================
+   Footer
+   ========================================================================== */
+
+.cont_footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #97ca3f;
+    padding: 0.5% !important;
+    
+}
+
+.agradecimiento{
+    text-align: center;
+    font-size: 2vh;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 0.3rem;
+    color: #2c2c2c;
+}
+
+.desarrollador{
+    text-align: center;
+    font-size: 1,5vh;
+    margin-bottom: 0.3rem;
+    color: #2c2c2c;
+}
+
+.enlace{
+    color: #12203d !important;
+    font-weight: 500;
+}
+
+/* =============================================================================
+   Responsive
+   ========================================================================== */
+
+@media only screen and (max-width: 600px) {
+
+    .tarjeta {
+        width: 90%; 
+        height: 65%;
+        top: 20%; 
+    }
+
+    .bordeAvatar {
+        width: 51vw;
+        aspect-ratio: 1 / 1;
+    }
+    .gradient {
+        width: 50.6vw;
+        aspect-ratio: 1 / 1;
+    }
+    .foto {
+        width: 47vw;
+    }
+    .contenido {
+        height: 50%;
+        padding: 6vw;
+    }
+    .cont_iconos {
+        height: 16vh;
+    }
+    .tarjeta .contenido .box .text h4 {
+        margin-top: 4.5rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+    .tarjeta .contenido .box .text p{
+        font-size: 2.3rem;
+    }
+    .cont_iconos {
+        height: 20%;
+    }
+    .material-icons {
+        font-size: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .tarjeta {     
+        height: 55%; 
+    }
+    .contenido {
+        margin-top: 6vh;
+    }
+    .tarjeta .contenido .box .text p{
+        font-size: 1.5rem;
+    }
+    .material-icons {
+        font-size: 32px !important;
+    }
+}
+
